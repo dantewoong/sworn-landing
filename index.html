@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sworn — the AI that messages you first</title>
+<meta name="description" content="Sworn remembers your goals and checks in before you forget them. No app to open, no streak to fake. Join the waitlist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23111113'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='800' fill='%23fafaf9' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">S</span>
+      Sworn
+    </a>
+    <div class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#join" class="btn btn-primary btn-sm">Join the waitlist</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>It messages you <em>first</em>, so you don't forget.</h1>
+        <p class="lead">Most AI waits for you to type. Sworn remembers your goals, checks in without being asked, and keeps the thread moving.</p>
+        <div class="hero-ctas">
+          <a href="#join" class="btn btn-primary">Join the waitlist</a>
+          <a href="#sample" class="btn btn-ghost">See a sample check-in</a>
+        </div>
+      </div>
+      <div class="hero-visual" id="sample">
+        <div class="phone-frame glass">
+          <div class="bubble bubble-ai">Still haven't hit the gym this week. What's the plan?</div>
+          <div class="bubble bubble-user">ugh, tomorrow probably</div>
+          <div class="bubble bubble-ai">Locking in 7am. I'll check back after.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Built to interrupt you, on purpose.</h2>
+        <p>Every other tool waits for you to show up. Sworn is built around the one moment that actually decides whether a goal happens: the moment you're about to let it slide.</p>
+      </div>
+      <div class="compare-grid reveal">
+        <div class="compare-stack">
+          <div class="compare-card">
+            <h3>ChatGPT and most AI tools</h3>
+            <p>Only responds when you open the app and ask. Silent the other 23 hours of the day.</p>
+          </div>
+          <div class="compare-card">
+            <h3>Habit trackers</h3>
+            <p>You log everything yourself. You notice the miss days later, if at all.</p>
+          </div>
+        </div>
+        <div class="compare-hero glass">
+          <h3>Sworn</h3>
+          <p>Notices the miss in real time and starts the conversation before you've had a chance to forget why you cared.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>It only speaks up when it matters.</h2>
+        <p>The fastest way to get uninstalled is to be annoying. Sworn is built with limits it can't talk its way out of.</p>
+      </div>
+      <div class="guardrails reveal">
+        <div class="guardrail">
+          <svg class="guardrail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a5 5 0 0 0-5 5v3.5c0 .7-.3 1.4-.8 1.9L5 15h14l-1.2-1.6c-.5-.5-.8-1.2-.8-1.9V8a5 5 0 0 0-5-5Z"/><path d="M9.5 18a2.5 2.5 0 0 0 5 0"/></svg>
+          <p>Three messages a day, at most.</p>
+        </div>
+        <div class="guardrail">
+          <svg class="guardrail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+          <p>Quiet hours you set, respected every time.</p>
+        </div>
+        <div class="guardrail">
+          <svg class="guardrail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6m0-6-6 6"/></svg>
+          <p>Say stop, and it stops. No guilt trip on the way out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Pick how it talks to you.</h2>
+        <p>Same memory, same timing, different voice. Change it any time from settings.</p>
+      </div>
+      <div class="tone-panel glass reveal" id="tonePanel">
+        <div class="tone-tabs" role="tablist">
+          <button class="tone-tab is-active" data-tone="brutal" role="tab" aria-selected="true">
+            <span class="tone-tab-label">Direct</span>Brutal
+          </button>
+          <button class="tone-tab" data-tone="coach" role="tab" aria-selected="false">
+            <span class="tone-tab-label">Structured</span>Coach
+          </button>
+          <button class="tone-tab" data-tone="friend" role="tab" aria-selected="false">
+            <span class="tone-tab-label">Warm</span>Friend
+          </button>
+          <button class="tone-tab" data-tone="assistant" role="tab" aria-selected="false">
+            <span class="tone-tab-label">Neutral</span>Assistant
+          </button>
+        </div>
+        <div class="tone-example">
+          <div class="tone-example-bubble" id="toneExample">Third time this week you skipped it. That's not busy, that's avoiding it.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>How it works.</h2>
+        <p>No calendar overhaul, no new app to check every morning.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step">
+          <div class="flow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20l9-16H3l9 16Z"/></svg></div>
+          <h3>Tell it your goal</h3>
+          <p>Exercise, a side project, calling your parents. Plain language, no setup wizard.</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>It watches your week</h3>
+          <p>Sworn tracks what you said you'd do against what you're actually doing.</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4A8.5 8.5 0 1 1 20 7"/><path d="M21 3v6h-6"/></svg></div>
+          <h3>It reaches out when you slip</h3>
+          <p>A message, not a badge. You can negotiate a new time right in the chat.</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+          <h3>You see the trend, not just the miss</h3>
+          <p>A short review every Sunday, with one honest suggestion for next week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="pricing">
+    <div class="container">
+      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+        <h2>Less than a coffee a week.</h2>
+        <p style="margin-left:auto;margin-right:auto;">One plan. Nothing hidden behind a second tier.</p>
+      </div>
+      <div class="pricing-card glass reveal">
+        <span class="pricing-badge">Early access price</span>
+        <p class="pricing-amount">$9.99<span>/month</span></p>
+        <p class="pricing-note">Locked in for anyone who joins from the waitlist.</p>
+        <ul class="pricing-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Unlimited goals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Proactive check-ins</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Personality picker</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Weekly review</li>
+        </ul>
+        <a href="#join" class="btn btn-primary" style="width:100%;">Join the waitlist</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+        <h2>Questions, answered.</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>What exactly is Sworn?</summary>
+          <p>An AI that remembers the goals you tell it about and messages you when you're falling behind, instead of waiting for you to open an app and check.</p>
+        </details>
+        <details>
+          <summary>Where does it message me?</summary>
+          <p>Telegram at launch. It's the fastest way to get this in front of the first users. Other channels are being evaluated based on demand.</p>
+        </details>
+        <details>
+          <summary>How is this different from a reminder app?</summary>
+          <p>A reminder fires on a timer whether or not you needed it. Sworn looks at what you actually did before deciding whether, and how, to reach out.</p>
+        </details>
+        <details>
+          <summary>Can I change the personality later?</summary>
+          <p>Yes, any time, from settings. Nothing about your goals or history resets when you switch.</p>
+        </details>
+        <details>
+          <summary>What happens to my data?</summary>
+          <p>It's used to decide when and how to message you, and nothing else. Full details will ship with the product's privacy policy.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band glass reveal">
+    <h2>Your next goal doesn't need more willpower.</h2>
+    <p>It needs someone else to notice when you drop it. Get on the list before the first cohort opens.</p>
+    <form class="cta-form" id="waitlistForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" id="join" placeholder="you@email.com" required>
+      <button type="submit" class="btn btn-inverse">Join the waitlist</button>
+    </form>
+    <p class="form-status" id="formStatus"></p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><span class="brand-mark">S</span>Sworn</a>
+        <p>The AI life manager that reaches out first, so your goals don't quietly disappear.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#top">About</a></li>
+          <li><a href="mailto:hello@example.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container" style="padding-left:0;padding-right:0;">
+      &copy; 2026 Sworn. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
