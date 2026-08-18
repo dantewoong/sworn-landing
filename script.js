@@ -41,14 +41,31 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
-// Waitlist form feedback (Formspree endpoint must be set in index.html before this works live)
+// Waitlist form — submits to Formspree via fetch so the visitor stays on the page.
 const form = document.getElementById("waitlistForm");
 const status = document.getElementById("formStatus");
 if (form) {
-  form.addEventListener("submit", (e) => {
-    if (form.action.includes("YOUR_FORM_ID")) {
-      e.preventDefault();
-      status.textContent = "Form endpoint not connected yet — swap YOUR_FORM_ID in index.html for a real Formspree ID.";
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector("button[type=submit]");
+    submitBtn.disabled = true;
+    status.textContent = "Sending...";
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        status.textContent = "You're on the list. We'll be in touch.";
+        form.reset();
+      } else {
+        status.textContent = "Something went wrong — try again in a moment.";
+      }
+    } catch {
+      status.textContent = "Something went wrong — try again in a moment.";
+    } finally {
+      submitBtn.disabled = false;
     }
   });
 }
