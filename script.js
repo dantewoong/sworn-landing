@@ -22,25 +22,6 @@ toneTabs.forEach((tab) => {
   });
 });
 
-// Reveal on scroll
-const revealEls = document.querySelectorAll(".reveal");
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-  revealEls.forEach((el) => observer.observe(el));
-} else {
-  revealEls.forEach((el) => el.classList.add("is-visible"));
-}
-
 // Waitlist form — submits to Formspree via fetch so the visitor stays on the page.
 const form = document.getElementById("waitlistForm");
 const status = document.getElementById("formStatus");
