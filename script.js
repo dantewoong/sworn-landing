@@ -1,6 +1,6 @@
 // Personality tab switcher
 const TONE_EXAMPLES = {
-  brutal: "Third time this week you skipped it. That's not busy, that's avoiding it.",
+  brutal: "Third time this week, you fucking snack-sized disappointment. Get up.",
   coach: "You're a little behind pace. Twenty minutes tonight gets you back on track.",
   friend: "Rough day, huh. Let's just pick this back up tomorrow, no big deal.",
   assistant: "Weekly goal completion is at 33 percent. Want me to move today's session to 7pm?",
